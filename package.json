@@ -1,0 +1,22 @@
+{
+  "name": "phone-verification",
+  "version": "1.0.0",
+  "description": "Twilio phone verification",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "twilio": "^5.2.2",
+    "cors": "^2.8.5",
+    "express-rate-limit": "^6.7.0",
+    "rate-limit-redis": "^2.1.0",
+    "redis": "^4.6.5",
+      "axios": "^1.7.7"
+  },
+  "devDependencies": {
+  }
+}

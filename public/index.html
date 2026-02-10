@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h2>Plese Verify OTP</h2>
+    
+     <form id="signup-form">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required >
+        <button type="button" onclick="sendOTP()">Send OTP</button>
+    </form> - 
+
+    <div id="otp-section" style="display:none;">
+        <h2>Enter OTP</h2>
+        <form id="otp-form">
+            <label for="otp">OTP:</label>
+            <input type="text" id="otp" name="otp" required>
+            <button type="button" onclick="verifyOTP()">Verify OTP</button>
+        </form>
+    </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="otp.js"></script>
+    <script>
+
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+
+
+        // Client name is read from sessionStorage; server uses it to pick Twilio credentials from env.
+        // e.g. sessionStorage.setItem("client_name", "MCINNES");
+
+
+      
+     /// sessionStorage.setItem("client_name" , "mcinnesgroup" ) 
+    // sessionStorage.setItem("zapierPostData", JSON.stringify(data));
+    // sessionStorage.setItem("nextPageURL", "/solar-products-v2/?ref=" + newRecordID );
+    // sessionStorage.setItem("recordID", newRecordID );
+    // sessionStorage.setItem("phoneNumber", jQuery.trim(jQuery("#phoneno").val()));
+    // sessionStorage.setItem("zapierURL", "https://hooks.zapier.com/hooks/catch/2299769/30z29bj");
+
+
+
+    $("#phone").val( sessionStorage.getItem("phoneNumber") ) 
+
+
+});
+
+
+    </script>
+</body>
+</html>
